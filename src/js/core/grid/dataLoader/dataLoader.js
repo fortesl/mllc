@@ -1,0 +1,1 @@
+angular.module('reviJs.core.grid.dataLoader', []);

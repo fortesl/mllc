@@ -1,0 +1,64 @@
+.revi-flyout {
+  background-color: $revi-color-background-light;
+  border: 1px solid $revi-color-border-light-minimum;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+
+  &.revi-dark {
+    border: none;
+  }
+
+  .revi-header {
+    margin: 0 5px 0 5px;
+    .revi-toolbar{
+      padding: 0;
+      margin:0;
+      .revi-button {
+        float: left;
+        display: inline-block;
+        margin-right: 2px;
+        width: 21px;
+        height: 21px;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &.revi-search {
+          @extend .revi-icon-search-s-light;
+        }
+
+        &.revi-plus {
+          @extend .revi-icon-plus-s-light;
+        }
+
+        &.revi-edit {
+          @extend .revi-icon-edit-s-light;
+        }
+
+        &.revi-minus {
+          @extend .revi-icon-minus-s-light;
+        }
+
+        &.revi-document {
+          @extend .revi-icon-document-s-light;
+        }
+
+        &.revi-approve {
+          @extend .revi-icon-approve-s-light;
+        }
+
+        &.revi-submit {
+          @extend .revi-icon-state-ind-white !optional;
+        }
+
+        &.revi-submit-recall {
+//          @extend .revi-icon-state-return-white;
+//          @extend .revi-icon-state-return-white;
+        }
+
+        &.revi-decline {
+          @extend .revi-icon-decline-s-light;
+        }
+      }
+    }
+  }
+}

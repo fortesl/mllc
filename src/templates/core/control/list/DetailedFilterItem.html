@@ -1,0 +1,10 @@
+<div class="revi-filter-item">
+    <div class="revi-title revi-label">{{filter.title}}</div>
+    <div class="revi-details revi-label"
+         ng-class="{4:'revi-markstatus', 3:'revi-attribute',2:'revi-product', 1:'revi-location'}[filter.nodeType];">
+        <revi-control-breadcrumb ng-if="(filter.nodeType == 2 || filter.nodeType == 1)" data-revi-model="filter.details" type="text"></revi-control-breadcrumb>
+        <div class="revi-label" ng-if="(filter.nodeType != 2 && filter.nodeType != 1)" title="{{filter.details}}">{{filter.details}}</div>
+    </div>
+    <button class="revi-close-button revi-button-flat" ng-click="reviOnRemove($index)"></button>
+    <button class="revi-filter-operator revi-button-flat" ng-class="{1:'revi-intersection', 2:'revi-union'}[filter.operator];" ng-click="reviOnOperatorChange($index)"></button>
+</div>

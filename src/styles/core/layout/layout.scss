@@ -1,0 +1,18 @@
+$revi-layout-gutter: 24px;
+$revi-layout-offset-top: 118px;
+$revi-layout-eastDock-width: 360px;
+$revi-layout-westDock-width: 322px;
+
+@import "dock";
+@import "content";
+@import "details";
+@import "toolsets";
+@import "viewport";
+@import "scrollbars";
+
+/* HACK: Should not be here */
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

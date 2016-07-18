@@ -1,0 +1,1 @@
+reviJs.core.grid.dataGrid.remoteLoader = angular.module('reviJs.core.grid.dataGrid.remoteLoader', []);

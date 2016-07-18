@@ -1,0 +1,70 @@
+<div class="revi-core-control-filter-attribute-form">
+    <form name="attributeForm" class="revi-form" ng-submit="submit()">
+        <div class="revi-body">
+            <div class="revi-field-input">
+                <div class="revi-field-label">{{reviModel.fields.attributeField.label}}</div>
+                <revi-control-input-field
+                    data-type="{{reviModel.fields.attributeField.type}}"
+                    ng-model="reviModel.fields.attributeField"
+                    ng-pattern="reviModel.fields.attributeField.validation"
+                    options="reviModel.fields.attributeField.options"
+                    title=""
+                    ng-change="attributeChanged()"></revi-control-input-field>
+                <span class="revi-error-inline" ng-show="attributeForm.attributeField.$invalid">{{reviModel.fields.attributeField.validationMessage}}</span>
+            </div>
+            <div class="revi-field-input">
+                <div class="revi-field-label">{{reviModel.fields.operatorField.label}}</div>
+                <revi-control-input-field
+                    data-type="{{reviModel.fields.operatorField.type}}"
+                    ng-model="reviModel.fields.operatorField"
+                    ng-pattern="reviModel.fields.operatorField.validation"
+                    options="reviModel.fields.operatorField.options"
+                    revi-option-filter="availableOperators"
+                    title=""
+                    ng-change="operatorChanged()"></revi-control-input-field>
+                <span class="revi-error-inline" ng-show="attributeForm.operatorField.$invalid">{{reviModel.fields.operatorField.validationMessage}}</span>
+            </div>
+            <div class="revi-field-input" ng-show="showTextField()">
+                <div class="revi-field-label">{{reviModel.fields.textField.label}}</div>
+                <revi-control-input-field
+                    data-type="{{reviModel.fields.textField.type}}"
+                    ng-model="reviModel.fields.textField"
+                    ng-pattern="reviModel.fields.textField.validation"
+                    ng-disabled="!showTextField()"
+                    title=""></revi-control-input-field>
+                <span class="revi-error-inline" ng-show="attributeForm.textField.$invalid">{{reviModel.fields.textField.validationMessage}}</span>
+            </div>
+            <div class="revi-field-input" ng-show="showNumericField()">
+                <div class="revi-field-label">{{reviModel.fields.numericField.label}}</div>
+                <revi-control-input-field
+                    data-type="{{reviModel.fields.numericField.type}}"
+                    ng-model="reviModel.fields.numericField"
+                    ng-pattern="reviModel.fields.numericField.validation"
+                    ng-disabled="!showNumericField()"
+                    title=""></revi-control-input-field>
+                <span class="revi-error-inline" ng-show="attributeForm.numericField.$invalid">{{reviModel.fields.numericField.validationMessage}}</span>
+            </div>
+            <div class="revi-field-input" ng-show="showDateField()">
+                <div class="revi-field-label">{{reviModel.fields.dateField.label}}</div>
+                <revi-control-date-picker-field
+                    revi-close-text="{{reviModel.fields.dateField.closeText}}"
+                    data-ng-model="reviModel.fields.dateField.value"
+                    ng-required="showDateField()"
+                    revi-date-disabled="neverDisableDate"></revi-control-date-picker-field>
+                <span class="revi-error-inline" ng-show="attributeForm.$invalid">{{reviModel.fields.dateField.validationMessage}}</span>
+            </div>
+            <div class="revi-field-input" ng-show="showMoneyField()">
+                <div class="revi-field-label">{{reviModel.fields.numericField.label}}</div>
+                <revi-control-input-field data-type="{{reviModel.fields.moneyField.type}}"
+                                          ng-model="reviModel.fields.moneyField"
+                                          ng-disabled="!showMoneyField()"
+                                          title=""></revi-control-input-field>
+                <span class="revi-error-inline" ng-show="attributeForm.moneyField.$invalid">{{reviModel.fields.moneyField.validationMessage}}</span>
+            </div>
+        </div>
+        <div class="revi-footer">
+            <button class="revi-button revi-add revi-button-flat" type="submit" ng-disabled="attributeForm.$invalid">{{reviModel.label.add}}</button>
+            <button class="revi-button revi-cancel revi-button-flat" type="button" ng-click="cancel()">{{reviModel.label.cancel}}</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+@import "../icons/images/revi-icon-chevron-s-light";
+@import "../icons/images/revi-icon-chevron-s-normal";
+.revi-breadcrumb {
+  .revi-item {
+    display: inline;
+
+    .revi-divider {
+      @extend .revi-icon-chevron-s-normal;
+      display: inline-block;
+      width: 16px;
+      height: 10px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .revi-item:last-child {
+    .revi-divider {
+      display:none;
+    }
+  }
+
+}

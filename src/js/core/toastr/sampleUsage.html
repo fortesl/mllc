@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../../../bower_components/angular-toastr/dist/angular-toastr.css">
+
+    <title>App</title>
+
+</head>
+
+<body ng-app="app">
+
+<div class="container" ng-controller="MyController as myCtrl">
+    <input type="button" value="ClickMe" ng-click="myCtrl.toggleToasts(0)"/>
+    <input type="button" value="ClickWarning" ng-click="myCtrl.toggleToasts(2)"/>
+    <input type="button" value="ClickInfo" ng-click="myCtrl.toggleToasts(3)"/>
+    <input type="button" value="ClickSuccess" ng-click="myCtrl.toggleToasts(4)"/>
+    <input type="button" value="ClickError" ng-click="myCtrl.toggleToasts(1)"/>
+</div>
+
+<script src="../../../../dist/dev/logic/reviJs.js"></script>
+
+<script>
+    angular.module('app', ['revi-toastr']).controller('MyController', ['reviToastrService', function(reviToastrService) {
+        this.toggleToasts = function(toastType) {
+            if (reviToastrService.thereAreOpenedToasts()>4) {
+                reviToastrService.clearToasts();
+            }
+            else if (toastType) {
+                reviToastrService.showToast({message: 'La dulce vita', title: 'VIVA LA VIDA', type: toastType});
+            }
+            else {
+                reviToastrService.showToast({message: 'La dulce vita', title: 'VIVA LA VIDA', type: toastType});
+            }
+        };
+    }]);
+</script>
+
+</body>

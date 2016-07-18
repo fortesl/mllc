@@ -1,0 +1,24 @@
+.revi-form .revi-field-group {
+  .revi-header {
+    background-color: $revi-color-background-dark-minimum;
+    background-image: -moz-linear-gradient(top, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($revi-color-background-dark-minimum), to($revi-color-background-dark-meduim));
+    background-image: -webkit-linear-gradient(top, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    background-image: -o-linear-gradient(top, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    background-image: linear-gradient(to bottom, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    height: 21px;
+    font-size: $revi-fonts-size-xs;
+    color: $revi-color-text-light;
+    line-height: 21px;
+    padding-left: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+  }
+
+  .revi-field-group-description {
+    font-size: $revi-fonts-size-m;
+    color: $revi-color-text-dark-minimum;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="revi-control-filter-search">
+    <form>
+        <input class="revi-field-search"
+               type="text"
+               ng-model="reviSearchTerm"
+               placeholder="{{reviPlaceholder}}"
+               autocomplete="off"
+               typeahead-on-focus
+               typeahead-min-length="3"
+               typeahead-wait-ms="750"
+               typeahead="result for result in onSearchTermChanged($viewValue) | filter:{HierarchyNodeName:$viewValue}"
+               typeahead-template-url="core/control/list/DetailedItem.html"
+               typeahead-on-select="onItemSelected($item, $model, $label)"
+        />
+    </form>
+    <div ng-show="isSearching()" class="revi-loading-indicator"></div>
+
+    <ul class="revi-menu">        
+        <li class="revi-item revi-tool revi-button-flat revi-markstatus" ng-show="isStatusButtonDisplayed" ng-click="toggleStatusFilterForm()" ng-class="{true:'revi-ACTIVE'}[isStatusFormDisplayed];" title="{{reviStatusFilterToolTooltip}}"></li>
+        <li class="revi-item revi-tool revi-button-flat revi-attribute" ng-show="isAttributeFilterButtonDisplayed" ng-click="toggleAttributeFilterForm()" ng-class="{true:'revi-ACTIVE'}[isAttributeFilterFormDisplayed];" title="{{reviAttributeFilterToolTooltip}}"></li>        
+    </ul>
+    <div class="revi-attribute-filter-flyout-container">
+        <revi-control-modal-dialog show="isAttributeFilterFormDisplayed" >
+            <div class="revi-flyout">
+                <revi-control-filter-attribute-form revi-on-cancel="toggleAttributeFilterForm()" revi-on-add="onAttributeFilterAdd(item)" revi-model="reviAttributeFormModel"></revi-control-filter-attribute-form>
+            </div>
+        </revi-control-modal-dialog>
+    </div>
+    <div class="revi-status-filter-flyout-container">
+        <revi-control-modal-dialog show="isStatusFormDisplayed">
+            <div class="revi-flyout">
+                <revi-control-filter-status-form revi-on-cancel="toggleStatusFilterForm()" revi-on-add="onAttributeFilterAdd(item)" revi-model="reviStatusFormModel"></revi-control-filter-status-form>
+            </div>
+        </revi-control-modal-dialog>
+    </div>
+</div>

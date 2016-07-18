@@ -1,0 +1,34 @@
+<div class="revi-calendar">
+
+	  <input type="text"
+           class="revi-field"
+           ng-show="!reviReadOnly"
+           ng-click="open($event)"
+           uib-datepicker-popup="{{format}}"
+           ng-model="ngModel"
+           is-open="opened"
+           close-text="{{reviCloseText}}"
+           show-weeks="false"
+           ng-required="ngRequired"
+           ng-disabled="ngDisabled"
+           date-disabled="reviDateDisabledFix(date)"
+           placeholder="{{reviPlaceholder}}"
+           title="{{reviTooltip}}"
+           revi-control-date-field-validator="{{format}}" />
+    <input type="text"
+           class="revi-field"
+           ng-model="ngModel"
+           ng-show="reviReadOnly"
+           ng-readonly="true" />
+		
+	<button type="button" class="revi-button" ng-click="open($event)"
+		ng-show="!reviReadOnly && !reviButtonClass" ng-disabled="ngDisabled"></button>
+	<button type="button" class="revi-button"
+		ng-show="reviReadOnly && !reviButtonClass"></button>
+	<button type="button" class="{{reviButtonClass}}"
+		ng-click="open($event)" ng-show="!reviReadOnly && reviButtonClass"></button>
+	<button type="button" class="revi-button"
+		ng-show="reviReadOnly && reviButtonClass"></button>
+	<button type="button" class="{{reviButtonClass}}"
+		ng-show="reviReadOnly && reviButtonClass"></button>
+</div>

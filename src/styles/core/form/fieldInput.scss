@@ -1,0 +1,112 @@
+.revi-form .revi-field-input {
+  .revi-field-label {
+    font-size: $revi-fonts-size-l;
+    color: $revi-color-text-dark-minimum;
+    margin-bottom: 5px;
+  }
+  
+  .revi-field {
+    font-size: $revi-fonts-size-m;
+    border: 1px solid $revi-color-border-dark-minimum;
+    width: 100%;
+    height: 27px;
+    background: $revi-color-background-light-maximum;
+    text-indent: 9px;
+
+    &.revi-select {
+      height: 31px;
+      text-indent: 5px;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $revi-color-emphasis-normal;
+    }
+
+    &.ng-invalid {
+      border: 1px solid $revi-color-failure;
+    }
+    &.min-max-invalid {
+      border: 1px solid $revi-color-failure;
+    }
+  }
+
+//  .revi-error-inline {
+//    font-family: $revi-fonts-family;
+//    font-size: $revi-fonts-size-s;
+//    color: $revi-color-failure;
+//  }
+
+  .revi-error-inline {
+    font-family: $revi-fonts-family;
+    font-size: $revi-fonts-size-s;
+    color: $revi-color-failure;
+    background-color: $revi-color-background-light-active;
+    padding: 2px;
+    border-radius: 2px;
+
+    &.revi-error-inline-position {
+      position:relative;
+      top: -6px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.revi-form .revi-field-input-edit-plans {
+    @extend .revi-field-input;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .revi-field-label {
+        font-size: $revi-fonts-size-m;
+        color: $revi-color-text-light;
+        margin-top: 5px;
+    }
+
+    .revi-calendar {
+        .revi-button {        
+            padding-right: 20px;
+        }              
+        .revi-field {
+            margin-bottom: 5px;
+            box-sizing: border-box;
+        }
+    }
+
+    .revi-field {
+        border: 1px solid $revi-color-background-dark-meduim;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+      }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.revi-form .revi-field-input-select-report {
+  @extend .revi-field-input;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .revi-field-label {
+    font-size: $revi-fonts-size-m;
+    color: $revi-color-text-light;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .revi-field {
+    border: 1px solid $revi-color-background-dark-meduim;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

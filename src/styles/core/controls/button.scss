@@ -1,0 +1,226 @@
+@import "../icons/images/revi-icon-add-s-light";
+@import "../icons/images/revi-icon-save-s-light";
+@import "../icons/images/revi-icon-close-s-light";
+@import "../icons/images/revi-icon-close-s-dark";
+@import "../icons/images/revi-icon-search-s-light";
+@import "../icons/images/revi-icon-edit-s-light";
+@import "../icons/images/revi-icon-minus-s-light";
+@import "../icons/images/revi-icon-plus-s-light";
+@import "../icons/images/revi-icon-add-light";
+@import "../icons/images/revi-icon-document-s-light";
+@import "../icons/images/revi-icon-minus-m-light";
+@import "../icons/images/revi-icon-approve-s-light";
+@import "../icons/images/revi-icon-beaker-configured-s-light";
+@import "../icons/images/revi-icon-decline-s-light";
+@import "../icons/images/revi-icon-beaker-configured-s-light";
+@import "../icons/images/revi-icon-plan-report";
+@import "../icons/images/revi-icon-triangle-right-s-light";
+
+input, select {
+	vertical-align: middle;
+	outline: none;
+	border: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.revi-base-large-button {
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    border-radius: 2px;
+    border: none;
+    font-size: $revi-fonts-size-xl;
+    color: $revi-color-text-light;
+}
+
+.revi-base-small-button {
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    border-radius: 2px;
+    border: none;
+    font-size: $revi-fonts-size-m;
+    color: $revi-color-text-light;
+}
+
+.revi-button {
+  cursor: pointer;
+  font-family: $revi-fonts-family;
+  letter-spacing: 1px;
+
+  &.revi-save {
+    @extend .revi-icon-save-s-light;
+    @extend .revi-base-large-button;
+
+    padding: 3px 13px 5px 47px;
+    background-color: $revi-color-emphasis-normal;
+  }
+
+  &.revi-approve-s {
+    @extend .revi-icon-approve-s-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 1px 13px 3px 37px;
+
+    margin-top: 25px;
+  }
+
+  &.revi-submit-s {
+//    @extend .revi-icon-state-ind-white;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 1px 13px 3px 37px;
+
+    margin-top: 25px;
+  }
+
+  &.revi-submit-recall-s {
+//    @extend .revi-icon-state-return-white;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 1px 13px 3px 37px;
+
+    margin-top: 25px;
+  }
+
+  &.revi-decline-s {
+    @extend .revi-icon-decline-s-light;
+    @extend .revi-base-small-button;
+    background-color: $revi-color-emphasis-normal;
+    padding: 1px 13px 3px 37px;
+
+    margin-top: 25px;
+  }
+
+  &.revi-delete-s {
+    @extend .revi-icon-minus-m-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 1px 13px 3px 50px;
+
+    margin-top: 25px;
+  }
+
+  &.revi-optimize-s {
+    @extend .revi-icon-beaker-configured-s-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 2px 13px 2px 39px;
+  }
+
+  &.revi-cancel-s {
+    @extend .revi-icon-close-s-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-low;
+    padding: 2px 13px 2px 39px;
+
+    margin-top: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  &.revi-confirm-s {
+    @extend .revi-icon-minus-m-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-high;
+    padding: 1px 13px 3px 39px;
+
+    margin-top: 25px;
+  }
+
+  &.revi-save-s {
+    @extend .revi-icon-save-s-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 2px 13px 2px 50px;
+  }
+
+  &.revi-report-s {
+    @extend .revi-icon-plan-report;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 2px 13px 2px 50px;
+  }
+
+  &.revi-add {
+    @extend .revi-save;
+    @extend .revi-icon-add-light;
+    padding: 3px 13px 5px 39px;
+  }
+
+  &.revi-add-s {
+    @extend .revi-icon-add-s-light;
+    @extend .revi-base-small-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 2px 13px 2px 39px;
+  }
+
+  &.revi-cancel {
+    @extend .revi-icon-close-s-light;
+    @extend .revi-base-large-button;
+
+    background-color: $revi-color-emphasis-low;
+    padding: 3px 13px 5px 36px;
+  }
+
+  &.revi-confirm {
+    @extend .revi-base-large-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 3px 13px 5px 13px;
+  }
+
+  &.revi-override-confirm {
+  	@extend .revi-icon-minus-m-light;
+    @extend .revi-base-large-button;
+    background-color: $revi-color-emphasis-high;
+    padding: 3px 13px 5px 36px;
+  }
+
+  &.revi-delete {
+    @extend .revi-icon-minus-m-light;
+    @extend .revi-base-large-button;
+
+    background-color: $revi-color-emphasis-normal;
+    padding: 3px 13px 5px 36px;
+  }
+
+  &.revi-accordion-open {
+    @extend .revi-icon-triangle-right-s-light;
+    @extend .revi-base-small-button;
+    margin-right: 4px;
+  }
+
+  &.revi-accordion-close {
+    @extend .revi-icon-minus-s-light;
+    @extend .revi-base-small-button;
+    margin-right: 6px;
+  }
+
+  &.revi-close {
+    @extend .revi-icon-close-s-dark;
+    background-position: center 4px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 25px;
+    float: right;
+  }
+
+  &[disabled],&.revi-DISABLED {
+    opacity: 0.5;
+    cursor: default;
+  }
+}

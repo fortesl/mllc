@@ -1,0 +1,14 @@
+.revi-viewport {
+  font-family: $revi-fonts-family;
+  font-size: $revi-fonts-size-m;
+  color: $revi-color-text-dark;
+  top: $revi-layout-offset-top;
+  background-color: $revi-color-background-light;
+
+  -webkit-transition: all 0.25s linear;
+
+  &.revi-EXPANDED {
+    top: 0px;
+    z-index: $revi-zindex-1st-above-normal;
+  }
+}

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="dist/css/markdownLlc.css">
+</head>
+<body style="background:#282929;">
+    <!--Portal Help Header Mock. Contains Just the Help Links Which Markdown SLC Updates-->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="legacyHeaderIcons">
+                <a id="helpImageAnchor" href="" target="_blank" tabindex="0">
+                    Help Image
+                </a><a id="helpTextAnchor" href="" target="_blank" tabindex="0" class="legacyIconLink" title="Help">
+                    Help
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <div id="markdownLLCAppContainer">
+        <div class="ng-view"/>
+    </div>
+
+    <script src="./dist/logic/thirdParty.js"></script>
+    <script src="./dist/logic/markdownLlc.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_en-us.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        rev_i18nBootstrap();
+        i18nDeferred.then(function () {
+            angular.bootstrap(document.getElementById('markdownLLCAppContainer'), ['Markdownllc']);
+        });
+    });
+    </script>
+
+</body>
+</html>

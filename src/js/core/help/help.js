@@ -1,0 +1,1 @@
+﻿reviJs.core.help = angular.module('reviJs.core.help', []);

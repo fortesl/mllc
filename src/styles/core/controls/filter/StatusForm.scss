@@ -1,0 +1,31 @@
+﻿@import '../../icons/images/revi-icon-mark-status-s-dark';
+.revi-core-control-filter-status-form {
+  padding:6px;
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 18px;
+    right: 9px;
+    top:-7px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    @extend .revi-icon-menu-pointer-light;
+  }
+
+  > .revi-form .revi-body {
+    .revi-field-input {
+      margin: 14px 12px 0 12px;
+    }
+  }
+
+  > .revi-form .revi-footer{
+    margin-top: 14px;
+    border-top: solid 1px $revi-color-border-light;
+    padding: 12px 0 8px 0;
+    .revi-button {
+      margin-left: 12px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+﻿@import "../icons/images/revi-icon-calendar-s-dark";
+@import "../icons/images/revi-icon-arrow-left-s";
+@import "../icons/images/revi-icon-arrow-right-s";
+@import "../icons/images/revi-icon-close-s-light";
+
+.revi-calendar {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    *, *:before, *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .revi-button, .revi-button1, .revi-button2 {
+        @extend .revi-icon-calendar-s-dark;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        right: 3px;
+        padding: 12px 10px;
+        top: 1px;
+    }
+
+  .text-center:hover {
+        button {
+            background-color:  $revi-color-background-light-highlight;
+        }
+    }
+
+    .dropdown-menu {
+        border: 1px solid $revi-color-background-dark;
+        background-color: $revi-color-background-light;
+        font-size: $revi-fonts-size-xs;
+        position: absolute;
+        z-index: $revi-zindex-3rd-above-normal;
+        box-shadow: 0 5px 10px $revi-color-background-dark;
+        border-radius: 2px;
+        padding-bottom: 10px;
+        width: 262px;
+
+        td {
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        .pull-left {
+            @extend .revi-icon-arrow-left-s;
+
+            height: 17px;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        .pull-right {
+            @extend .revi-icon-arrow-right-s;
+
+            height: 17px;
+            background-repeat: no-repeat;
+            float: right;
+            padding: 6px;
+        }
+
+        .btn-default {
+            background: none no-repeat;
+            border: none;
+        }
+
+        .btn-sm {
+            line-height: 1.4;
+            padding: .3rem .4rem;
+        }
+
+        .btn[disabled] {
+            cursor: pointer;
+        }
+
+        .btn-block {
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .btn-info {
+            background-color: $revi-color-emphasis-normal;
+            color: $revi-color-text-light;
+        }
+
+        .btn-success.pull-right {
+            @extend .revi-icon-close-s-light;
+
+            background-repeat: no-repeat;
+            background-position: 13px center;
+            background-color: $revi-color-emphasis-low;
+            padding: 0 13px 0 39px;
+            border-radius: 2px;
+            border: none;
+            font-size: $revi-fonts-size-m;
+            color: $revi-color-text-light;
+            height: 25px;
+            margin: 0 74px;
+
+            &:hover {
+                box-shadow: 0 1px 4px 0 $revi-color-background-dark;
+                border-radius: 2px;
+
+                -webkit-transition: all 0.15s linear;
+            }
+        }
+
+        .btn-group {
+            display: none;
+        }
+    }
+}

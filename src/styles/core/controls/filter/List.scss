@@ -1,0 +1,127 @@
+@import '../../icons/images/revi-icon-location-s';
+@import '../../icons/images/revi-icon-product-s';
+@import '../../icons/images/revi-icon-attribute-s-dark-min';
+@import '../../icons/images/revi-icon-mark-status-s-dark';
+@import '../../icons/images/revi-icon-intersection-operator-emphasis-normal';
+@import '../../icons/images/revi-icon-union-operator-emphasis-normal';
+@import '../../icons/images/revi-icon-close-emphasis-normal-m';
+
+.revi-control-filter-list {
+    position: absolute;
+    top: $revi-control-filter-search-height;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+
+  .revi-filter-item {
+    $item-height: 81px;
+    position:relative;
+    padding: 17px $revi-toolsets-gutter 18px $revi-toolsets-gutter;
+    cursor: move;
+    border-bottom: 1px solid $revi-color-border-light;
+    background-color: $revi-color-background-light;
+
+    .revi-close-button {
+      $height: 32px;
+      width: 32px;
+      height: $height;
+      float:right;
+      margin-top: -1 * (($item-height/2)-($height/2) + 11);
+      background-position: center center;
+      background-repeat: no-repeat;
+      @extend .revi-icon-close-emphasis-normal-m;
+    }
+
+    .revi-filter-operator {
+      $height: 27px;
+      $width: 39px;
+      position: absolute;
+      height: $height;
+      width: $width;
+      top: -1* ceil($height/2);
+      left: ($revi-layout-westDock-width/2)-($width/2);
+      background-color: $revi-color-background-light;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &.revi-intersection {
+        @extend .revi-icon-intersection-operator-emphasis-normal;
+      }
+
+      &.revi-union {
+        @extend .revi-icon-union-operator-emphasis-normal;
+      }
+
+    }
+
+    .revi-title{
+      font-size: $revi-fonts-size-l;
+      color:$revi-color-text-dark;
+      text-shadow: $revi-fonts-shadow;
+      padding-right: 44px;
+    }
+
+    .revi-details{
+      font-size: $revi-fonts-size-s;
+      color: $revi-color-text-dark-minimum;
+      margin-top: 2px;
+      padding-left: 13px;
+      padding-right: 44px;
+
+      background-position: left center;
+      background-repeat: no-repeat;
+
+      &.revi-location{
+        @extend .revi-icon-location-s;
+      }
+      &.revi-product{
+        padding-left: 18px;
+        @extend .revi-icon-product-s;
+      }
+      &.revi-attribute{
+        padding-left: 18px;
+        @extend .revi-icon-attribute-s-dark-min;
+      }
+      &.revi-markstatus{
+        padding-left: 18px;
+        @extend .revi-icon-mark-status-s-dark;
+      }
+      .revi-breadcrumb .revi-divider{
+        width: 10px;
+        height: 8px;
+      }
+    }
+  }
+
+  .revi-item{
+    &:first-child{
+      .revi-filter-operator{
+        display:none;
+      }
+    }
+    &:first-child.ui-sortable-helper + .revi-item,
+    &.ui-sortable-placeholder + .revi-item{
+      .revi-filter-item {
+        .revi-filter-operator{
+          display:none;
+        }
+      }
+    }
+    &.ui-sortable-helper
+    {
+      .revi-filter-item {
+
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.375);
+        .revi-close-button{
+          display:none;
+        }
+        .revi-filter-operator{
+          display:none;
+        }
+      }
+    }
+
+  }
+}
+

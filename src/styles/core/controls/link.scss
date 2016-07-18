@@ -1,0 +1,7 @@
+.revi-link {
+  color: $revi-color-emphasis-normal;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,18 @@
+.revi-toolbar {
+  display: inline-block;
+
+  .revi-date-range-picker {
+    display: inline-block;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid $revi-color-border-dark-minimum;
+  }
+
+  > .revi-tool {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: top;
+  }
+}

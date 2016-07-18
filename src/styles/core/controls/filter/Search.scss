@@ -1,0 +1,141 @@
+@import '../../icons/images/revi-icon-location-s';
+@import '../../icons/images/revi-icon-product-s';
+@import '../../icons/images/revi-icon-menu-pointer-light';
+@import '../../icons/images/revi-icon-mark-status-s-dark';
+@import '../../icons/images/revi-icon-loading-s';
+@import '../../icons/images/revi-icon-attribute-s-dark';
+.revi-control-filter-search {
+  position: relative;
+  height: $revi-control-filter-search-height;
+  background: $revi-color-emphasis-normal;
+  box-shadow: inset 0px 1px 27px 1px darken($revi-color-emphasis-normal,10%);
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 5px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(darken($revi-color-emphasis-normal,10%), 0.8) 0%, rgba(darken($revi-color-emphasis-normal,10%), 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(darken($revi-color-emphasis-normal,10%), 0.8)), color-stop(100%, rgba(darken($revi-color-emphasis-normal,10%), 0)));
+  }
+
+  .revi-loading-indicator {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 70px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    @extend .revi-icon-loading-s;
+  }
+
+  .revi-field-search {
+    height: 27px;
+    position: absolute;
+    line-height: 2;
+    border-top: 1px solid darken($revi-color-emphasis-normal,6%);
+    border-radius: 14px;
+    padding: 0 14px 0 14px;
+    top: 50%;
+    width: ($revi-layout-westDock-width - ($revi-toolsets-gutter * 4));
+    left: $revi-toolsets-gutter;
+    margin-top: -13.5px;
+  }
+
+  .revi-modal-dialog {
+    position: fixed;
+    margin: 47px 0 0 12px;
+    width: ($revi-layout-westDock-width - ($revi-toolsets-gutter * 2));
+  }
+
+  > .revi-menu {
+    position: absolute;
+    right: 20px;
+    top: 19px;
+    border-left: 1px solid $revi-color-border-dark-minimum;
+    height: 22px;
+
+    .revi-item {
+        display: inline;
+        float: right;
+        list-style-type: none;
+    }
+
+    .revi-tool {
+      width: 20px;
+      height: 20px;
+      &.revi-attribute {
+        @extend .revi-icon-attribute-s-dark;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: 4px;
+        margin-top: 1px;
+      }
+
+      &.revi-markstatus {
+        @extend .revi-icon-mark-status-s-dark;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: 4px;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: ($revi-layout-westDock-width - ($revi-toolsets-gutter * 2));
+    padding: 0px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: $revi-color-background-light;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.375);
+    max-height: 164px;
+    max-width: ($revi-layout-westDock-width - ($revi-toolsets-gutter * 2));
+    overflow: auto;
+
+    &>li.active>.revi-item{
+      background-color: $revi-color-background-light-highlight;
+    }
+
+    &>li>.revi-item {
+      padding: 7px $revi-toolsets-gutter 7px $revi-toolsets-gutter;
+      cursor: pointer;
+      .revi-title{
+        font-size: $revi-fonts-size-l;
+        color: $revi-color-emphasis-normal;
+        text-shadow: $revi-fonts-emphasis-normal-shadow;
+      }
+
+      .revi-details{
+        font-size: $revi-fonts-size-s;
+        color:$revi-color-text-dark;
+        margin-top: 2px;
+
+        background-position: left center;
+        background-repeat: no-repeat;
+
+        &.revi-location{
+          padding-left: 14px;
+          @extend .revi-icon-location-s;
+        }
+
+        &.revi-product{
+          padding-left: 18px;
+          @extend .revi-icon-product-s;
+        }
+      }
+    }
+  }
+}

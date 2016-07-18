@@ -1,0 +1,22 @@
+﻿.revi-markdown-calendar {
+    .revi-jumbotron {
+        margin: auto;
+        padding: 10px;
+        width:80%;
+        text-align: center;
+        color: $revi-color-light;
+        background-color: $revi-color-background-dark-minimum;
+        font-size: $revi-fonts-size-xxxxl;
+        border-radius: 2em;
+        border: 2px solid $revi-color-light;
+    }
+    .revi-link {
+        font-size: $revi-fonts-size-xl;
+        position: relative;
+        left: 80%;
+        margin:1em 0 0.3em 0;
+        a {
+            color: $revi-color-emphasis-high;
+        }
+    }
+}

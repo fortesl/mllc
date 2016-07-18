@@ -1,0 +1,31 @@
+@import "../icons/images/revi-icon-loading";
+
+.revi-loading-shim {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: rgba(34, 34, 34, 0.8);
+  transition: all 1s;
+  -webkit-transition: all 1s;
+
+  .revi-loading-indicator {
+    @extend .revi-icon-loading;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    border-radius: 40px;
+    background-color: rgba(20, 20, 20, 0.9);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

@@ -1,0 +1,59 @@
+$revi-content-header-height: 47px;
+$revi-content-header-messagebar-height: 40px;
+$revi-content-header-rollupbar-height: 100px;
+
+.revi-content {
+  /*-webkit-transition: all 0.25s linear 0.25s;*/
+  > * {
+    padding: $revi-layout-gutter;
+  }
+
+  .revi-header {
+    .revi-title {
+      display: inline-block;
+      font-size: $revi-fonts-size-xxxxl;
+      text-shadow: 0 0 1px rgba(40, 40, 41, 0.3);
+      letter-spacing: 2px;
+      height: $revi-content-header-height;
+    }
+    .revi-smaller-title {
+      display: inline-block;
+      font-size: $revi-fonts-size-xxl;
+      text-shadow: 0 0 1px rgba(40, 40, 41, 0.3);
+      letter-spacing: 2px;
+      height: $revi-content-header-height;
+    }
+    .revi-smallest-title {
+      display: inline-block;
+      font-size: $revi-fonts-size-l;
+      text-shadow: 0 0 1px rgba(40, 40, 41, 0.3);
+      letter-spacing: 2px;
+      height: $revi-content-header-height;
+    }
+
+    .revi-toolbar {
+      vertical-align: top;
+      margin-top: 10px;
+      padding: 0 20px 0 20px;
+
+      .revi-tool {
+        display: inline-block;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+.revi-ACTIVE-DETAILS {
+  > .revi-content {
+    /*-webkit-transition: all 0.15s linear;*/
+    right: $revi-layout-eastDock-width;
+  }
+}
+
+.revi-ACTIVE-TOOLSETS {
+  > .revi-content {
+    /*-webkit-transition: all 0.15s linear;*/
+    left: $revi-layout-westDock-width;
+  }
+}

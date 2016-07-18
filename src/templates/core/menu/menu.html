@@ -1,0 +1,11 @@
+<div class="revi-HIDDEN" ng-class="{'false':'revi-HIDDEN','true':'tooltip bottom fade in'}[model.showMenu];">
+    <div class="tooltip-arrow"></div>
+    <div class="tooltip-inner">
+        <div>
+            <ul ng-repeat="menuGroup in model.menuGroups">
+                <li ng-repeat="menuItem in menuGroup" ng-click="clickMenuItem(menuItem.eventName);">{{menuItem.label}}</li>
+                <li ng-show="!$last"><hr /></li>
+            </ul>
+        </div>
+    </div>
+</div>

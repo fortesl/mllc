@@ -1,0 +1,57 @@
+﻿.revi-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $revi-zindex-top-of-everything;
+    display: block;
+    overflow-x: auto;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.revi-shim {
+    opacity: 1;
+    position: absolute;
+    overflow: hidden;
+    z-index: $revi-zindex-4rd-above-normal;
+    background-color: $revi-color-background-dark-minimum;
+    transition: all 1s ease 0s;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.revi-modal-box {
+    position: relative;
+    width: 300px;
+    margin: 30px auto;
+}
+
+.revi-modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    background-color: $revi-color-background-light;
+    border-radius: 6px;
+    background-clip: padding-box;
+    outline: none;
+    padding: 5px;
+}
+
+.revi-modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: center;
+}
+
+.revi-modal-body {
+    padding: 15px;
+}
+.revi-modal-header {
+}
+
+.revi-modal-hidden {
+    display: none;
+}

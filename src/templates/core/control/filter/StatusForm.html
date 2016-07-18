@@ -1,0 +1,17 @@
+﻿<div class="revi-core-control-filter-status-form">
+    <form name="statusForm" class="revi-form" ng-submit="submit()">
+        <div class="revi-body">
+            <ng-form name="fieldForm" ng-repeat="field in reviModel.fields">
+                <div class="revi-field-input">
+                    <div class="revi-field-label">{{field.label}}</div>
+                    <revi-control-input-field data-type="{{field.type}}" ng-model="field" ng-pattern="field.validation" options="field.options" title=""></revi-control-input-field>
+                    <span class="revi-error-inline" ng-show="fieldForm.$invalid">{{field.validationMessage}}</span>
+                </div>
+            </ng-form>
+        </div>
+        <div class="revi-footer">
+            <button class="revi-button revi-add revi-button-flat" type="submit" ng-disabled="statusForm.$invalid">{{reviModel.label.apply}}</button>
+            <button class="revi-button revi-cancel revi-button-flat" type="button" ng-click="cancel()">{{reviModel.label.cancel}}</button>
+        </div>
+    </form>
+</div>

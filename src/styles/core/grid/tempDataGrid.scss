@@ -1,0 +1,208 @@
+@import "../icons/images/revi-icon-triangle-right-s-high";
+@import "../icons/images/revi-icon-triangle-right-s-light";
+@import '../icons/images/revi-icon-chevron-s-light';
+
+.revi-DataGrid {
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    tr{
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      background: transparent;
+      td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+      }
+    }
+  }
+
+  .revi-ColumnsCanvas, .revi-RowsCanvas {
+    /*    position: relative;*/
+    /*    overflow: hidden;*/
+  }
+  .revi-RowsCanvas {
+    /*    position: absolute;*/
+    top: 160px;
+    right:24px;
+    left:24px;
+    bottom: 12px;
+  }
+
+  .revi-Columns {
+    border-top: 2px solid $revi-color-border-dark;
+    /*min-width: 100%;*/
+
+    text-shadow: 0px 0px 1px rgba(#5a5b5b,0.3);
+
+    .revi-GroupsRow {
+      text-transform:uppercase;
+      text-align: center;
+      letter-spacing: 1px;
+      .revi-DataField {
+        .revi-Value {
+          font-size: 7pt;
+        }
+      }
+    }
+
+    .revi-DataRow {
+      .revi-DataField {
+        position: relative;
+        border-bottom: 1px solid #adadad;
+        min-width: 250px;
+
+      }
+      .revi-DataField.revi-Group:not(.revi-Group-End) {
+        border-right: none;
+      }
+
+      .revi-Border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: -1px;
+        height: 70%;
+        border-right: 1px solid #adadad;
+      }
+    }
+
+    .revi-AggregateRow {
+
+      .revi-DataField{
+        border-bottom: 1px solid #adadad;
+        .revi-breadcrumb .revi-item .revi-divider {
+          @extend .revi-icon-chevron-s-light;
+        }
+
+        .revi-Value {
+          color: #efeeed;
+          letter-spacing: 0;
+          margin: 1px 0 1px 0;
+          background-color: #878787;
+
+
+
+          .revi-link {
+            color: #efeeed;
+          }
+        }
+
+        .revi-Boolean{
+
+          .revi-Checked {
+            background-position: center -16px;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  .revi-Rows {
+    /*min-width: 100%;*/
+
+    .revi-DataRow {
+      &:hover {
+        background: #DDD;
+      }
+      &.revi-SELECTED {
+        background: $revi-color-emphasis-normal;
+
+        .revi-Value {
+          color: $revi-color-text-light;
+        }
+        .revi-explicit {
+          @extend .revi-icon-triangle-right-s-light;
+        }
+      }
+      .revi-DataField{
+        min-width: 20px;
+        .revi-Value {
+          letter-spacing: 0;
+          padding: 1px 13px 2px 13px;
+          height: 18px;
+          line-height: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .revi-DataField {
+    white-space: nowrap;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+
+    .revi-Value {
+      position: relative;
+      font-size: 11pt;
+      color: #5a5b5b;
+      padding: 5px 13px 5px 13px;
+      -webkit-user-select: none;
+
+      .revi-breadcrumb .revi-item span{
+        font-size: 11pt;
+      }
+
+      .revi-DataSymbol {
+        float: left;
+        font-size: 11pt;
+      }
+    }
+
+    .revi-explicit {
+      @extend .revi-icon-triangle-right-s-high;
+      background-position: -2px center;
+      background-repeat: no-repeat;
+    }
+
+    .revi-Numeric, .revi-Percentage, .revi-Currency {
+      text-align: right;
+    }
+    .revi-Boolean{
+      text-align: center;
+      .revi-Checked {
+        width: 16px;
+        height:16px;
+        /* @extend .revi-Checkmark;*/
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .revi-DataField:not(:last-child) {
+    border-right: 1px solid #adadad;
+  }
+
+  .revi-DataField:last-child {
+    min-width: 50px;
+  }
+}

@@ -1,0 +1,15 @@
+$defaultDockLeft: 0px;
+$withToolsDockLeft: 350px;
+
+.revi-dock, .revi-dock-with-tools {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: $defaultDockLeft;
+	overflow: hidden;
+}
+
+.revi-dock-with-tools {
+	left: $withToolsDockLeft;
+}

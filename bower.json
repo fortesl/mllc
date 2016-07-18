@@ -1,0 +1,42 @@
+{
+  "name": "Revionics.Markdown.LLC.UI",
+  "description": "Revionics Markdown Long Life Cycle UI",
+  "main": "index.js",
+  "authors": [
+    "Revionics Dev"
+  ],
+  "license": "REVIONICS",
+  "keywords": [
+    "Angular",
+    "SlickGrid"
+  ],
+  "moduleType": [],
+  "homepage": "http://revionics.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.0",
+    "jquery-ui": "1.10.4",
+    "angular": "~1.5.7",
+    "angular-route": "~1.5.7",
+    "angular-mocks": "~1.5.7",
+    "SlickGrid-revionics": "slickgrid-revionics#~2.2.15",
+    "angular-cache": "~4.6.0",
+    "moment": "~2.14.1",
+    "isteven-angular-multiselect": "angular-multi-select#~4.0.0",
+    "angular-toastr": "~1.7.0",
+    "bootstrap-sass": "~3.3.6",
+    "angular-i18n": "~1.5.7",
+    "angular-placeholder-shim": "~0.3.1",
+    "jquery-html5-placeholder-shim": "*"
+  },
+  "resolutions": {
+    "angular": "~1.5.7"
+  }
+}

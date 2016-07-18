@@ -1,0 +1,14 @@
+$revi-fonts-family: Segoe UI, Arial, Helvetica, sans-serif;
+
+$revi-fonts-size-m: 11pt;
+$revi-fonts-size-l: $revi-fonts-size-m + 2;
+$revi-fonts-size-xl: $revi-fonts-size-m + 4;
+$revi-fonts-size-xxl: $revi-fonts-size-m + 6;
+$revi-fonts-size-xxxl: $revi-fonts-size-m + 8;
+$revi-fonts-size-xxxxl: $revi-fonts-size-m + 10;
+
+$revi-fonts-size-s: $revi-fonts-size-m - 2;
+$revi-fonts-size-xs: $revi-fonts-size-m - 4;
+
+$revi-fonts-shadow: rgba(40, 40, 41, 0.298039) 0px 0px 1px;
+$revi-fonts-emphasis-normal-shadow: rgba(darken($revi-color-emphasis-normal,10%), 0.298039) 0px 0px 1px;

@@ -1,0 +1,16 @@
+﻿@import "../icons/images/revi-icon-master-plan-s-light";
+@import "../icons/images/revi-icon-working-plan-s-light";
+
+.revi-modal-overlay {
+    position: fixed;
+    z-index: $revi-zindex-1st-above-normal;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.revi-modal-dialog {
+    z-index: $revi-zindex-2nd-above-normal;
+	padding: 0 2px;
+}

@@ -1,0 +1,10 @@
+<select class="revi-field revi-select"
+        data-ng-model="ngModel.value"
+        data-ng-options="option.value as option.label for option in options | filter: reviOptionFilter()"
+        title="{{title}}"
+        name="{{ngModel.name}}"
+        ng-change="ngChange()"
+        ng-disabled="ngDisabled()"
+        ng-required="!ngDisabled()"
+        ng-class="ngClass()">
+</select>

@@ -1,0 +1,39 @@
+.revi-icon-warning{
+  color: $revi-color-warning;
+  position:relative;
+  width:0;
+  height:0;
+  border:solid 0.6em $revi-color-warning;
+  border-top-color:transparent;
+  border-left-color:transparent;
+  border-right-color:transparent;
+  border-bottom:solid 1.2em;
+  left: -1.4em;
+  top:-3.1em;
+  &.revi-icon-warning-checkbox-position {
+    left: -3.4em;
+    top:-0.9em;
+  }
+  &:after{
+    display:block;
+    content:"";
+    position:absolute;
+    left:-0.1em;
+    top:1.7em;
+    width:0.16em;
+    height:0.5em;
+    background:$revi-color-background-dark;
+    border-radius:0.05em;
+  }
+  &:before{
+    display:block;
+    content:"";
+    position:absolute;
+    left:-0.1em;
+    top:2.3em;
+    width:0.16em;
+    height:0.1em;
+    background:$revi-color-background-dark;
+    border-radius:0.05em;
+  }
+}

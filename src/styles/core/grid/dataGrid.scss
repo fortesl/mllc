@@ -1,0 +1,128 @@
+@import '../icons/images/revi-icon-chevron-s-normal';
+.revi-data-grid {
+  $revi-data-grid-cell-padding : 2px 13px 2px 13px;
+  border-top: 2px solid $revi-color-border-dark;
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .revi-sorted-column-data {
+    background-color: $revi-sorted-column-color;
+  }
+
+  .revi-currency,
+  .revi-numeric {
+    text-align: right;
+  }
+
+  .revi-Boolean {
+      text-align:center;
+  }
+
+  .revi-cell {
+    height: 100%;
+    padding: $revi-data-grid-cell-padding;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    .revi-symbol {
+      font-family: $revi-fonts-family;
+      font-size: $revi-fonts-size-m;
+      float: left;
+    }
+  }
+
+  .revi-breadcrumb .revi-item .revi-label {
+    font-family: $revi-fonts-family; /* Overriding site.css */
+    font-size: $revi-fonts-size-m;
+  }
+
+  .grid-canvas{
+    .revi-nogridrows {
+        color: $revi-color-emphasis-high;
+        padding: 20px 13px 20px 13px;
+    }
+
+    .slick-row{
+      color: $revi-color-text-dark-minimum;
+      &:hover {
+        background: $revi-color-background-light-highlight;
+        color: $revi-color-text-dark;
+        z-index: $revi-zindex-top-of-everything;
+      }
+ 
+      .slick-cell {
+        border-right: 1px solid $revi-color-border-light-minimum;
+        border-bottom: none;
+        border-left:none;
+        border-top:none;
+        padding: 0;
+        &.selected {
+            background: $revi-color-emphasis-normal;
+            color: $revi-color-text-light;
+            .revi-breadcrumb .revi-item .revi-divider {
+              @extend .revi-icon-chevron-s-light;
+            }
+        }
+      }
+    }
+  }
+
+  .slick-header {
+    .slick-header-column {
+      padding: 22px 13px 5px 13px;
+      border: 1px solid  transparent;
+      border-right: 1px solid $revi-color-border-light-minimum;
+      border-left: none;
+      .slick-column-name{
+        font-family: $revi-fonts-family;
+        font-size: $revi-fonts-size-m;
+        color: $revi-color-text-dark-minimum;
+        text-shadow: 0 0 1px rgba($revi-color-text-dark-minimum,0.3);
+      }
+      .slick-sort-indicator {
+        display: none;
+      }
+    }
+  }
+  .slick-headerrow {
+    background-color: $revi-color-background-dark-minimum;
+    background-image: -moz-linear-gradient(top, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($revi-color-background-dark-minimum), to($revi-color-background-dark-meduim));
+    background-image: -webkit-linear-gradient(top, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    background-image: -o-linear-gradient(top, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+    background-image: linear-gradient(to bottom, $revi-color-background-dark-minimum 80%, $revi-color-background-dark-meduim);
+
+    .slick-headerrow-columns{
+      /*height: 33px;  Set in JS via slick grid options (needed for view port calc) */
+      border: 1px solid transparent;
+      border-top: 1px solid $revi-color-border-light-minimum;
+      border-bottom: 1px solid $revi-color-border-light-minimum;
+      border-left: none;
+    }
+
+    .slick-headerrow-column {
+      height: 100%;
+      border-right: 1px solid $revi-color-border-light-minimum;
+      border-top: 1px solid $revi-color-background-light;
+      border-bottom: 1px solid $revi-color-background-light;
+      border-left:none;
+      color: $revi-color-text-light;
+      padding: 0;
+
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+        .revi-breadcrumb .revi-item .revi-divider {
+              @extend .revi-icon-chevron-s-light;
+            }
+
+      .revi-cell {
+        padding-top: 5px;
+      }
+    }
+  }
+}

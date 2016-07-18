@@ -1,0 +1,1 @@
+reviJs.core.grid.dataGrid.formatters = angular.module('reviJs.core.grid.dataGrid.formatters', []);

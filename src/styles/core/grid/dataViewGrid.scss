@@ -1,0 +1,55 @@
+.revi-data-view-grid-container{
+    .slick-group {
+        border-bottom: 2px solid silver;
+        &:hover{
+            border-bottom:none;
+        }
+    }
+
+    .slick-group-toggle {
+        width: 9px;
+        height: 9px;
+        margin-right: 5px;
+    }
+
+    .slick-group-toggle.expanded {
+        @extend .revi-icon-collapse;
+    }
+
+    .slick-group-toggle.collapsed {
+        @extend .revi-icon-expand;
+    }
+
+    //aggregate row styling
+
+     .grid-canvas{
+        .slick-row{
+           &.slick-group-totals {
+                color: #ffffff;
+                background: #9C9D9D;
+                line-height: 23px;
+           }
+        }
+     }
+
+    .cell-effort-driven {
+        text-align: center;
+    }
+
+    .slick-group-title[level='0'] {
+        font-weight: bold;
+        line-height: 27px;
+    }
+
+    .slick-group-title[level='1'] {
+        text-decoration: underline;
+    }
+
+    .slick-group-title[level='2'] {
+        font-style: italic;
+    }
+    .group-count{
+        font-size: 12px;
+        vertical-align: bottom;
+    }
+}

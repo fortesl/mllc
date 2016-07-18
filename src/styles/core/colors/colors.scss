@@ -1,0 +1,47 @@
+$revi-color-dark: #282929;
+$revi-color-light: #f0f1f1;
+
+$revi-color-emphasis-high: #da7000;
+$revi-color-emphasis-high-passive: #f0c292;//lighten(desaturate( $revi-color-emphasis-high, 61% ),40%);
+$revi-color-emphasis-normal: #06749f; /*#031a6e;*//*#06749f;*/
+$revi-color-emphasis-low: #8c8c8c;
+
+$revi-color-failure: #E92343;
+$revi-color-success: #00BE40;
+$revi-color-warning: #FFD700;
+
+$revi-sorted-column-color: rgba(204, 229, 255, 0.1);
+
+$revi-color-background-white: #fff;
+$revi-color-background-light: $revi-color-light;
+$revi-color-background-light-highlight: darken($revi-color-background-light,8%);
+$revi-color-background-light-maximum: #f6f7f7;
+$revi-color-background-light-active: darken($revi-color-background-light,6%);
+
+$revi-color-background-dark: $revi-color-dark;
+$revi-color-background-dark-meduim: lighten($revi-color-background-dark,10%);
+$revi-color-background-dark-minimum: lighten($revi-color-background-dark,36%);
+$revi-color-background-dark-meduim-active: darken($revi-color-background-dark-meduim,6%);
+
+
+$revi-color-text-dark: $revi-color-background-dark;
+$revi-color-text-dark-minimum: #5a5b5b;
+$revi-color-text-light: #eaeaea;
+
+$revi-color-border-dark: $revi-color-dark;
+$revi-color-border-light: $revi-color-light;
+$revi-color-border-dark-minimum: $revi-color-background-dark-minimum;
+$revi-color-border-light: #b6b6b6;
+$revi-color-border-light-minimum: darken($revi-color-light,30%);
+
+$revi-color-divider-light: #616161;
+
+$revi-color-scrollbar-track: #474749;
+$revi-color-scrollbar-button: #59595B;
+$revi-color-scrollbar-text: #EAEAEA;
+$revi-color-scrollbar-text-sub: #A9A9A9;
+
+$revi-color-box-shadow: #4B4B4B;
+
+$revi-rollupbar-background-color: #06749f;
+$revi-rollupbar-light : lighten( $revi-rollupbar-background-color, 5% );
