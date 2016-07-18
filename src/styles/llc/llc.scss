@@ -1,2 +1,10 @@
 ﻿@import "calendar";
 @import "rulesets";
+
+.revi-json {
+  background-color: $revi-color-background-light-active;
+  padding: 10px;
+  margin: auto;
+  width:70%;
+  margin-top:3em;
+}

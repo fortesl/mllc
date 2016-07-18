@@ -34,7 +34,8 @@
     "bootstrap-sass": "~3.3.6",
     "angular-i18n": "~1.5.7",
     "angular-placeholder-shim": "~0.3.1",
-    "jquery-html5-placeholder-shim": "*"
+    "jquery-html5-placeholder-shim": "*",
+    "json-formatter": "~0.6.0"
   },
   "resolutions": {
     "angular": "~1.5.7"

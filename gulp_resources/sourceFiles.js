@@ -3,7 +3,8 @@
         css: [
             'bower_components/slickgrid-revionics/slick.grid.css',
             'bower_components/angular-multi-select/isteven-multi-select.css',
-            'bower_components/angular-toastr/dist/angular-toastr.css'
+            'bower_components/angular-toastr/dist/angular-toastr.css',
+            'bower_components/json-formatter/dist/json-formatter.css'
         ],
         js: [
             'bower_components/jquery/dist/jquery.js',
@@ -28,6 +29,7 @@
             'bower_components/moment/moment.js',
             'bower_components/angular-placeholder-shim/angular-placeholder-shim.js',
             'bower_components/angular-multi-select/isteven-multi-select.js',
+            'bower_components/json-formatter/dist/json-formatter.js',
             'bower_components/angular-toastr/dist/angular-toastr.tpls.js'
         ]
     },

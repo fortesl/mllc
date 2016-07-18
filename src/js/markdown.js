@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('Markdownllc', ['jm.i18next', 'reviJs.core', 'ngRoute'])
+    angular.module('Markdownllc', ['jm.i18next', 'reviJs.core', 'ngRoute', 'jsonFormatter'])
 
         .config(function ($routeProvider) {
 
