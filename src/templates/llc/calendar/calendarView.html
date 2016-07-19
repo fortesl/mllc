@@ -1,9 +1,9 @@
-﻿<!-- MarkdownCalendar View-->
+﻿<!-- MarkdownCalendar View - injected controller 'calendarCtrl'-->
+
 <div class="revi-markdown-calendar">
     <div class="revi-link"><a href="#/rulesets">Rulesets</a></div>
     <div class="revi-jumbotron">Welcome to Markdown Calendar</div>
 
-    <div class="revi-json">
-        <json-formatter json="{my: 'json'}" open="1"></json-formatter>
-    </div>
+    <json-response name="Markdown Calendar" open-branches="1" response="calendarCtrl.markdownCalendarJson"></json-response>
+    <json-response name="Markdown Events List" open-branches="3" response="calendarCtrl.markdownEventsListJson"></json-response>
 </div>

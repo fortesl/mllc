@@ -10,13 +10,16 @@ reviJs.core.comm.factory('reviJs.core.comm.Http', [
     '$q',
     '$http',
     '$rootScope',
-    'DSCacheFactory',
+    'CacheFactory',
     'reviJs.core.comm.Event',
     'reviJs.core.comm.StatusCode',
     'reviToastrService',
     '$location',
     '$window',
     function ($q, $http, $rootScope, DSCacheFactory, event, statusCode, toastrService, $location, $window) {
+
+        'use strict';
+
         var restrictEnum = {
                 NONE: '0', // No restriction on pending requests
                 SINGLE: '1', // Restrict pending requests to one; abort preceding requests
@@ -46,7 +49,7 @@ reviJs.core.comm.factory('reviJs.core.comm.Http', [
                 default:
                     break;
             }
-        };
+        }
 
         /**
          * Register request as pending.
@@ -55,19 +58,18 @@ reviJs.core.comm.factory('reviJs.core.comm.Http', [
          */
         function registerRequest(request, config){
             pendingRequests[config.url] = request;
-        };
+        }
 
         var getRootWebSitePath = function() {
             var _location = $location.absUrl();
             var applicationNameIndex = _location.indexOf('/', _location.indexOf('://') + 3);
             var markdownIndex = _location.toUpperCase().indexOf('/MARKDOWN/', _location);
 
-            if (markdownIndex == -1)
+            if (markdownIndex === -1) {
                 return '';
+            }
 
-            var webFolderFullPath = _location.substring(applicationNameIndex, markdownIndex) + '/Markdown/ShortLifecycle/';
-
-            return webFolderFullPath;
+            return _location.substring(applicationNameIndex, markdownIndex) + '/Markdown/ShortLifecycle/';
         };
         var rootWebSitePath = getRootWebSitePath();
 
@@ -184,7 +186,7 @@ reviJs.core.comm.factory('reviJs.core.comm.Http', [
             registerRequest(wrapper, config);
 
             return wrapper;
-        };
+        }
 
         function generateUrl(path) {
             return rootWebSitePath + path;

@@ -135,8 +135,7 @@
 
 
         //MARKDOWN LLC
-       'src/js/llc/calendar/markdown-calendar.js',
-        'src/js/llc/rulesets/markdown-rulesets.js'
+        'src/js/llc/**/*.js'
     ]
 };
 

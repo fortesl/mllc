@@ -6,4 +6,4 @@
  * The reviJs.core.comm module defines the core system namespace and package for external client communications.
  *
  */
-reviJs.core.comm = angular.module('reviJs.core.comm', []);
+reviJs.core.comm = angular.module('reviJs.core.comm', ['angular-cache']);
