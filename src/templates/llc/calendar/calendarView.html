@@ -4,6 +4,7 @@
     <div class="revi-link"><a href="#/rulesets">Rulesets</a></div>
     <div class="revi-jumbotron">Welcome to Markdown Calendar</div>
 
+    <div ng-show="calendarCtrl.isBusy" class="revi-spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>
     <json-response name="Markdown Calendar" open-branches="1" response="calendarCtrl.markdownCalendarJson"></json-response>
     <json-response name="Markdown Events List" open-branches="3" response="calendarCtrl.markdownEventsListJson"></json-response>
 </div>

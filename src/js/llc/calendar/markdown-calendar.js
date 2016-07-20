@@ -9,12 +9,15 @@
 
 
             var getMarkdownCalendar = function() {
-                self.markdownCalendarJson = {my: 'json'};
+                self.markdownCalendarJson = {};
+                self.isBusy = true;
 
                 llcServices.sendRequest({url: 'markdownCalendar'}).then(function(results) {
                     self.markdownCalendarJson = results;
                 }, function() {
                     self.markdownCalendarJson = {error: 'Could not get Markdown calendar data'};
+                }).then(function() {
+                    self.isBusy = false;
                 });
             };
 
@@ -35,10 +38,13 @@
                     take: 50
                 };
 
+                self.isBusy = true;
                 llcServices.sendRequest({url: 'markdownEventsList', data: params}).then(function(results) {
                     self.markdownEventsListJson = results;
                 }, function() {
                     self.markdownEventsListJson = {error: 'Could not get Markdown Events List data'};
+                }).then(function() {
+                    self.isBusy = false;
                 });
             };
 
